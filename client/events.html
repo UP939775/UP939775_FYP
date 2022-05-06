@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/events.js"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+    </style>
+</head>
+<header class="header">
+    <div>
+        <h1 class="website-title-mobile">Project<span id="title-p2">Park</span></h1>
+    </div>
+    
+    <div class="navigation">
+        <h1 class="page-title-web">Project<span id="title-p2">Park</span></h1>
+        <a href="/"><div class="nav-option">Home</div></a>
+        <a href="/events.html"><div class="nav-option">Events</div></a>
+        <a href="/about.html"><div class="nav-option">About</div></a>
+        <div class="user-location"><img src="" alt="" srcset=""> Portsmouth</div>
+    </div>
+
+</header>
+    <div class="events-option" id="events-main">
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h1>Welcome to Project<span id="title-p2">Park</span></h1>
+
+                <p class="modal-text">Please select your location from the list below</p>
+                <select name="" id="modal-location" class="event-dropdown">
+                    <option value="">Select a location</option>
+                    <option value="Portsmouth">Portsmouth</option>
+                    <option value="Bristol">Bristol</option>
+                </select>
+
+                <button id="modal-submit-button">
+                    Submit
+                </button>
+                <p class="modal-text" id="invalid-modal-selection">Please select a location</p>
+            </div>
+
+         </div>
+        <!-- <h1 class="events-title">Events</h2> -->
+        <!-- <p class="events-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id sem sodales, porta nibh sit amet, pretium urna. Vestibulum aliquam sapien eu est feugiat, at gravida lacus malesuada. </p> -->
+        <div id="events-header">
+            <a href="./event-submission.html" class="event-option" >
+                <div id="add-event">
+                    <img class="event-icon" src="./images/icons/icons8-add-100.png" alt="" srcset=""> Add Event
+                </div>
+            </a>
+            
+            <!-- <div id="filter-events" class="event-option">
+                <img class="event-icon" src="./images/icons/icons8-filter-mail-100.png" alt="" srcset=""> Filter Events
+            </div> -->
+        </div>
+        <input type="text" name="search" id="search-home" placeholder="Search...">
+        <div id="event-filters">
+            <h2 class="filter-title">- Filter Events -</h2>
+
+            <div class="event-filter">
+                <label for="event-type">Event Type</label>
+                <select class="event-dropdown" name="" id="">
+                    <option value="Show All"></option>
+                    <option value="competitive">Competitive</option>
+                    <option value="educational">Educational</option>
+                    <option value="recreational">Recreational</option>
+                </select>
+            </div>
+
+            <div class="event-filter">
+                <label for="event-type">Event Location</label>
+                <select class="event-dropdown" name="" id="">
+                    <option value="Show All"></option>
+                    <option value="competitive">Competitive</option>
+                    <option value="educational">Educational</option>
+                    <option value="recreational">Recreational</option>
+                </select>
+            </div>
+
+            <div class="event-filter">
+                <label for="event-type">Date</label><br>
+                <input type="date" name="" id="" class="event-dropdown" >
+            </div>
+
+            <div class="event-filter-button">
+                <div class="default-button" id="filter-button">Apply Filters</div>
+            </div>
+
+        </div>
+
+        <div id="events-container" class="events-container-location">
+
+        </div>
+
+
+
+
+    </div>
+
+     
+    
+    
+</body>
+</html>

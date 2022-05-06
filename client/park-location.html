@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+    </style>
+</head>
+<header class="header">
+    <div>
+        <h1 class="website-title-mobile">Project<span id="title-p2">Park</span></h1>
+    </div>
+    
+    <div class="navigation">
+        <h1 class="page-title-web">Project<span id="title-p2">Park</span></h1>
+        <a href="/"><div class="nav-option">Home</div></a>
+        <a href="/events.html"><div class="nav-option">Events</div></a>
+        <a href="/about.html"><div class="nav-option">About</div></a>
+        <div class="user-location"><img src="" alt="" srcset=""> Portsmouth</div>
+    </div>
+
+</header>
+    <div id="location-main">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h1>Welcome to Project<span id="title-p2">Park</span></h1>
+
+
+                <p class="modal-text">Please select your location from the list below</p>
+                <select name="" id="modal-location" class="event-dropdown">
+                    <option value="">Select a location</option>
+                    <option value="Portsmouth">Portsmouth</option>
+                    <option value="Bristol">Bristol</option>
+                </select>
+
+                <button id="modal-submit-button">
+                    Submit
+                </button>
+                <p class="modal-text" id="invalid-modal-selection">Please select a location</p>
+            </div>
+
+         </div>
+        
+        <div class="subpage-header">
+            <img class="subpage-image" src="" alt="" srcset="">
+            <h1 class="title subpage-title"></h1>
+            <h2 class="subpage-address"></h2>
+            <p class="location-description"> </p>
+
+            <div class="community-messages-notifications">
+
+                <div class="alert-message community-notification" id="alert-notification" >ALERTS</div>
+                <div class="update-message community-notification" id="update-notification">UPDATES</div>
+
+            </div>
+        </div>
+
+        <div id="location-facilities" class="location-block">
+            
+            <div>
+                <button class="subpage-section active" id="info">General Information</button>
+                <div class="section-dropdown" id="general-information">
+                    <hr>
+                    <div id="subpage-general-info">
+                        <div id="general-info-container">
+                            <p class="info-detail">Toilets: <span class="info-detail-value"></span></p>
+                            <p class="info-detail">Food/Drinks: <span class="info-detail-value"></span></p>
+                            <p class="info-detail">Street Lights: <span class="info-detail-value"></span></p>
+                            <p class="info-detail">Cycle Path: <span class="info-detail-value"></span></p>
+                            <p class="info-detail">Pond: <span class="info-detail-value"></span></p>
+                            <p class="info-detail">Wildlife: <span class="info-detail-value"></span></p>
+                            <p class="info-detail">Parking: <span class="info-detail-value"></span></p>
+                            <p class="info-detail">Disabled Access: <span class="info-detail-value"></span></p>
+                            
+                        </div>
+                        <p id="subpage-description">Descrition: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra nunc sit amet fermentum venenatis. Morbi sodales eget velit quis egestas. Mauris imperdiet dui quis neque fringilla, at pulvinar neque tincidunt. Suspendisse a pellentesque mauris. Praesent luctus libero nisl, sed lobortis velit condimentum vel.</p>
+
+                    </div>
+
+                    <div class="location-map" id="location-map">                        
+
+                    </div>
+                </div>
+
+                <button class="subpage-section active" id="facility" >Facilites</button>
+                <div class="section-dropdown" id="facilities">
+                    <hr>
+                    
+                    <div class="location-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra nunc sit amet fermentum venenatis.
+                    </div>
+
+                    <div class="headings">
+                        <div class="facility-heading">
+                            Name of Facility: 
+                        </div>
+                        <div class="facility-heading">
+                            Facility Status:
+                        </div>
+                        <div class="facility-heading">
+                            Status Duration:
+                        </div>
+                    </div>
+                </div>
+        
+                <button class="subpage-section active" id="event" >Events</button>
+                <div class="section-dropdown" id="events">
+                    <div id="events-container">
+
+                    </div>
+                </div>
+        
+                <button class="subpage-section active" id="community">Community</button>
+                <div class="section-dropdown" id="community-dropdown">
+                    <hr>
+                    <div id="community-filter-container">
+                        <select name="comment-filter" id="comment-filter" class="comments-dropdown">
+                            <option value="Show All">Show All Messages</option>
+                            <option value="General">General Messages</option>
+                            <option value="Alerts">Alert Messages</option>
+                            <option value="Updates">Update Messages</option>
+                        </select>
+                    </div>
+
+                    <div class="community-messages-container" >
+
+
+                    </div>
+                    <div class="community-post-container">
+                        <input class="input-field" type="text" id="comment-author" placeholder="Name">
+                        <textarea name="community-post" id="community-post" placeholder="Enter your message"></textarea>
+                        <select name="post-type" id="post-type-dropdown" class="comments-dropdown">
+                            <option value="general">General</option>
+                            <option value="alert">Alert</option>
+                            <option value="update">Update</option>
+                        </select>
+                        
+                        <div id="submit-comment-button" class="default-button" >
+                            Submit Community Post
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+        
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+<script src="scripts/location.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAi9DNybMTW4S_7ZEkpyw1mkZQwLu5B-2A&callback=initMap&v=weekly"></script>
+
+</html>
