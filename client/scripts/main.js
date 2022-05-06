@@ -159,18 +159,8 @@ async function initMap(locations, searchValue) {
         fullscreenControl: false,
     });
 
-    // console.log(searchValue)
-    
-    // for (const location of locations) {
-    //     if(locations.includes(searchValue)){
-    //         console.log(locations);
-    //     }
-    // }
 
 
-
-
-    console.log(facilities);    
     
     for (let i = 0; i < locations.length; i++) {
         
@@ -248,25 +238,11 @@ function displaylistView() {
 
 }
 
-// function displaySearchBar(){
 
-//     displaylistView()
-//     dom.homeFilterContainer.style.display = 'none';
-//     dom.filterButtonHome.classList = 'icon-container';
-//     if(dom.searchBar.style.display === 'block' || sessionStorage.getItem('pageView') === 'map'){
-//         dom.searchBar.style.display = 'none';
-//         this.classList = 'icon-container';
-        
-//     } else {
-//         dom.searchBar.style.display = 'block';
-//         this.classList = 'icon-container view-active';
-//     }
-
-// }
 
 function displayHomeFilters(){
     dom.searchBar.style.display = 'none';
-    // dom.searchBarButton.classList = 'icon-container';
+
     if(dom.homeFilterContainer.style.display === 'flex'){
         dom.homeFilterContainer.style.display = 'none';
         this.classList = 'icon-container';
