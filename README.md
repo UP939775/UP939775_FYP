@@ -15,5 +15,7 @@ NPM start can be used to start the application.
 
 When running the applicaiton can be run by going to http://localhost:8080/
 
+To make use of the simulated hardware component go to http://localhost:8080/hardware-simulation/index.html
+
 
 
