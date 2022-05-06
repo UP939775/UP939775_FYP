@@ -16,7 +16,6 @@ async function loadEvent() {
         event = [{ msg: 'Unable to load park locations, please refresh page' }];  
     }
 
-    console.log(event);
 
     displayEvent(event)
 }

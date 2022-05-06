@@ -8,23 +8,7 @@ function getLocationID() {
     return window.location.hash.substring(1);
 }
 
-function randomise() {
 
-    
-    // for (const tickbox of dom.allTickboxes) {
-    //     let random = Math.random() < 0.5;
-
-    //     if(random === true) {
-    //         console.log(getInfo(tickbox))
-
-    //     } 
-
-    //     let timeStamp = new Date();
-    //     timeStamp = timeStamp.toString().substring(0,25);
-        
-    // }
-    
-}
 
 async function getTestData(parks) {
     const response = await fetch(`../test-data`);
@@ -93,7 +77,7 @@ function getInfo(tickboxElement) {
     let avName = tickboxElement.id.substring(9,tickboxElement.id.length).toLowerCase() + '_available'
     let avTimestamp = tickboxElement.id.substring(9,tickboxElement.id.length).toLowerCase() + '_timestamp'
     let facID = `${tickboxElement.id}`;
-    console.log(tickboxElement);
+
     let parkID = tickboxElement.parentNode.parentNode.id
 
     let array = [parkID, avTimestamp, avName, facID];
@@ -119,7 +103,7 @@ function getTickbox() {
 
     }
     result.push(value, timeStamp)
-    console.log(result  )
+
     updateSystem(result)
 }
 
@@ -141,12 +125,11 @@ function domElements() {
     dom.container = document.querySelector('#testing-main');
     dom.header = document.querySelector('.header');
     dom.allTickboxes = document.getElementsByTagName('input');
-    dom.randomiseButton = document.querySelector('#randomise');
+
 }
 
 // EVENT LISTENERS FUNCTION
 function prepareEventListeners() {
-    dom.randomiseButton.addEventListener('click', randomise)
     
        
     

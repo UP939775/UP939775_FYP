@@ -27,36 +27,7 @@ async function loadParkDetails(park) {
 }
 
 
-// async function createFacilities(park) {
-    
-//     const id = getLocationID();
-//     const response = await fetch(`get-facilities/${id}`);
-//     if (response.ok) {
-//         park = await response.json();
 
-        
-//         } else {
-//         park = { error: 'This location cannot be found. Please return to the home page' };
-//         dom.parkTitle.textContent = park.error
-//     }
-
-//     let facilitiesArray = []
-
-//     for (const [key, value] of Object.entries(park)) {
-//         facilitiesArray.push(value);
-//     }
-
-//     facilitiesArray.shift();
-
-
-//     for (let i = 0; i <= facilitiesArray.length + 1; i++) {
-//         if(facilitiesArray[i] === 1){
-//             dom.facilityOptions[i].innerHTML = '&#10003;';
-//         } else if(facilitiesArray[i] === 0){
-//             dom.facilityOptions[i].innerHTML = '&#10007;'
-//         }  
-//    }    
-// }
 
 async function generalInformation(){
     const id = getLocationID();
@@ -83,17 +54,6 @@ async function generalInformation(){
         }
     }
 
-
-    
-    // if(park.toilet === 1) {dom.generalInfoValues[0].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
-    // if(park.toilet === 1) {dom.generalInfoValues[1].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
-    // if(park.toilet === 1) {dom.generalInfoValues[2].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
-    // if(park.toilet === 1) {dom.generalInfoValues[3].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
-    // if(park.toilet === 1) {dom.generalInfoValues[4].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
-    // if(park.toilet === 1) {dom.generalInfoValues[5].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
-    // if(park.toilet === 1) {dom.generalInfoValues[6].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
-    // if(park.toilet === 1) {dom.generalInfoValues[7].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
-    // if(park.toilet === 1) {dom.generalInfoValues[8].textContent = 'Yes';} else {dom.generalInfoValues[1].textContent = 'No';}
     
 }
 
@@ -224,9 +184,7 @@ async function getAvailibility(park, park_avail) {
             dom.availibility.className = 'availibility';
             dom.section[1].append(dom.availibility);
 
-            // createCardElement(dom.facilityName, 'div', 'facility-heading', 'Facility ', dom.availibility);
-            // createCardElement(dom.facilityStatus, 'div', 'facility-status', 'Status', dom.availibility)
-            // createCardElement(dom.statusDuration, 'div', 'status-duration', 'Status Duration', dom.availibility)
+
 
             dom.availibilityName = document.createElement('div');
             dom.availibilityName.className = 'availibility-name'
@@ -291,9 +249,7 @@ function changeAvail() {
 
     for (let i = 0; i < dom.availibilityOptions.length; i++) {
     }
-    // let updateTime = setInterval(function () {
 
-    // }, 1000)
 
 }
 
@@ -380,33 +336,12 @@ async function loadEvents(number, number2, parkID) {
             eventDate.append(dateValue);
             dateValue.textContent = `${event.event_date} ${event.event_start_time} - ${event.event_end_time}`
     
-            // const time = document.createElement('p');
-            // time.className = 'event-date';
-            // time.textContent = `Time: `;
-            // eventCard.append(time);
-            // timeValue = document.createElement('span');
-            // time.append(timeValue);
-            // timeValue.textContent = `${event.event_start_time} - ${event.event_end_time}`
     
             const time = document.createElement('p');
             time.className = 'event-desctiption';
             time.textContent = `${event.event_description.substring(0,200)}... `;
             eventCard.append(time);
     
-    
-            // const time = document.createElement('p');
-            // time.className = 'event-date';
-            // time.textContent = `Time: `;
-            // eventCard.append(time);
-            // timeValue = document.createElement('span');
-            // time.append(timeValue);
-            // timeValue.textContent = `${event.event_start_time} - ${event.event_end_time}`
-
-    
-            // const viewButton = document.createElement('div');
-            // viewButton.textContent = 'View Event';
-            // viewButton.className = 'view-event-button';
-            // viewButtonLink.append(viewButton);
         }
     }
 }

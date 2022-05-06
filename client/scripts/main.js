@@ -43,14 +43,7 @@ async function displayLocations(locations){
         locationCard.append(dom.facilitiesContainer);
         dom.facilitiesContainer.id = location.park_id;
 
-        // const viewButtonLink = document.createElement('a');
-        // viewButtonLink.href = `/park-location.html#${location.park_id}`;
-        // locationCard.append(viewButtonLink);
 
-        // const viewButton = document.createElement('div');
-        // viewButton.textContent = 'View Park';
-        // viewButton.className = 'view-park-button';
-        // viewButtonLink.append(viewButton); 
         
         const response = await fetch(`/home-availibility/${location.park_id}`)
         let facilities
@@ -59,11 +52,6 @@ async function displayLocations(locations){
         } else {
             facilities = { error: 'This location cannot be found. Please return to the home page' };
         }
-
-        // for (const [key, value] of Object.entries(facilities[0])) {
-        //     console.log(key + value)
-
-        // }
 
 
         for (const [key, value] of Object.entries(facilities[0])) {
@@ -104,17 +92,6 @@ async function homeAvailibility(result) {
 
 
 
-
-// async function getAvailibilityforHome() {
-    
-
-//     let x = availibility
-//     display(availibility)
-// }
-
-// function display(x){
-//     console.log(x)
-// }
 
 async function loadLocations() {
     dom.userLocation.textContent = localStorage.getItem('userLocation')

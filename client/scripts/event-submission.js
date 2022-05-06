@@ -40,7 +40,7 @@ async function submitEvent(){
     _event.description = dom.description.value;
     _event.city = localStorage.getItem('userLocation'); 
 
-    console.log(_event);
+
 
     const payload = { msg: _event }
 

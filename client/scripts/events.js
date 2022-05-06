@@ -85,36 +85,11 @@ async function loadEvents() {
         eventDate.append(dateValue);
         dateValue.textContent = `${event.event_date} ${event.event_start_time} - ${event.event_end_time}`
 
-        // const time = document.createElement('p');
-        // time.className = 'event-date';
-        // time.textContent = `Time: `;
-        // eventCard.append(time);
-        // timeValue = document.createElement('span');
-        // time.append(timeValue);
-        // timeValue.textContent = `${event.event_start_time} - ${event.event_end_time}`
 
         const time = document.createElement('p');
         time.className = 'event-description';
         time.textContent = `${event.event_description.substring(0,200)}... `;
         eventCard.append(time);
-
-
-        // const time = document.createElement('p');
-        // time.className = 'event-date';
-        // time.textContent = `Time: `;
-        // eventCard.append(time);
-        // timeValue = document.createElement('span');
-        // time.append(timeValue);
-        // timeValue.textContent = `${event.event_start_time} - ${event.event_end_time}`
-
-
-
-        // const viewButton = document.createElement('div');
-        // viewButton.textContent = 'View Event';
-        // viewButton.className = 'view-event-button';
-        // viewButtonLink.append(viewButton);
-
-
 
     }
 }
