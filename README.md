@@ -1,4 +1,4 @@
-# final-year-project
+# Final Year Project
 
 **DISCLAIMER** This project has been created for academic use only 
 
